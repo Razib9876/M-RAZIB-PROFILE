@@ -89,7 +89,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       >
         {/* Logo */}
         <div className="mb-16">
-          <h1 className="text-4xl font-extrabold tracking-[0.25em] text-black dark:text-white">
+          <h1 className="text-4xl font-extrabold tracking-[0.25em] text-black font-serif dark:text-white">
             M.Razib
           </h1>
           <p className="mt-2 text-sm tracking-[0.4em] text-zinc-500 dark:text-zinc-400">

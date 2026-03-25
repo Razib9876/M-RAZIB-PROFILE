@@ -1,42 +1,112 @@
-import Section from "../components/Section";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaDownload } from "react-icons/fa";
+import { MdDownload } from "react-icons/md";
 
 const About = () => {
   return (
-    <Section id="about">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-between bg-amber-300">
-        <div>
-          <h2 className="text-4xl font-bold mb-6">About Me</h2>
-          <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
-            I am a passionate developer with a focus on **User Experience**. I
-            don't just write code; I build interfaces that feel natural and
-            performant. With 3+ years of experience in the React ecosystem, I
-            help brands turn complex ideas into simple digital products.
-          </p>
-
-          <div className="grid grid-cols-2 gap-6">
-            <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-              <h4 className="text-3xl font-bold text-blue-600">50+</h4>
-              <p className="text-sm text-slate-500">Projects Completed</p>
-            </div>
-            <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-              <h4 className="text-3xl font-bold text-purple-600">12</h4>
-              <p className="text-sm text-slate-500">Happy Clients</p>
-            </div>
-          </div>
+    <section
+      id="about"
+      className="bg-base-100 min-h-screen  flex  transition-colors duration-300"
+    >
+      <div className="w-full px-6 w-full">
+        {/* Simple Header - Logo Style */}
+        <div className="mb-10 border-l-8 border-base-content pl-6">
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-base-content">
+            About <br />
+            <span className="opacity-30">Me.</span>
+          </h2>
         </div>
 
-        <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-          <div className="relative bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
-              alt="Profile"
-              className="w-full grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
+        {/* Main Content Grid */}
+        <div className="grid md:grid-cols-12 gap-12">
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-8 space-y-8"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-base-content">
+              I'm Mohammad Razib
+            </h3>
+
+            <div className="space-y-6 text-lg text-base-content/70 leading-relaxed font-medium">
+              <p>
+                I studied Management, but later discovered my passion for web
+                development and started learning it.
+              </p>
+
+              <p className="text-base-content">
+                I enjoy solving real-world problems. I built a local solution
+                with a bidding system, which challenged me to work with data
+                structures, backend logic, and TypeScript as a fresher.
+              </p>
+
+              <p>
+                Recently, I'm working with local business owners about building
+                modern, maintainable custom-coded e-commerce websites and
+                improving their branding.
+              </p>
+
+              <p className="text-base-content font-bold underline decoration-1 underline-offset-8">
+                Currently, I am exploring AI, web design, and no-code tools to
+                expand my skills.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Highlights Sidebar */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="md:col-span-4"
+          >
+            <div className="bg-base-content text-base-100 p-8 rounded-none border border-base-content">
+              <h4 className="text-xs uppercase tracking-[0.3em] mb-6 opacity-70">
+                Core Focus
+              </h4>
+              <ul className="space-y-4 font-bold text-sm">
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  Real-world problem solving
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  Backend & API development
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  Scalable architecture focus
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  Creative & design interest
+                </li>
+              </ul>
+            </div>
+
+            {/* Subtle Button */}
+            <div className="mb-4 mt-6 w-full">
+              {/* Download CV */}
+              <a
+                href="/cv.pdf"
+                download
+                className="flex items-center justify-center gap-2
+                               border border-zinc-300 dark:border-zinc-700
+                               py-3 mt-6 mb-8 text-sm tracking-widest
+                               hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black
+                               transition-all"
+              >
+                <MdDownload />
+                DOWNLOAD CV
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

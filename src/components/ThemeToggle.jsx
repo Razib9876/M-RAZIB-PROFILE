@@ -8,10 +8,14 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="flex items-center justify-between w-full px-4 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all active:scale-95"
+      className="flex justify-around items-center  gap-2
+                     border border-zinc-300 dark:border-zinc-700
+                     py-3 mb-8 text-sm tracking-widest
+                     hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black
+                     transition-all w-full "
     >
       <span className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">
-        Appearance
+        Theme
       </span>
 
       <div className="relative w-6 h-6 overflow-hidden">

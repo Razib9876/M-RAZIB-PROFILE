@@ -4,8 +4,8 @@ import Sidebar from "./components/Sidebar";
 import Home from "./Sections/Home";
 import About from "./Sections/About";
 import Projects from "./Sections/Projects";
-import Skills from "./Sections/Skills";
 import Contact from "./Sections/Contact";
+import Blog from "./Sections/Blog";
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -24,8 +24,8 @@ const App = () => {
       <main className="w-full lg:ml-[22%] lg:w-[78%] min-h-screen transition-all duration-300">
         <Home />
         <About />
-        <Skills />
         <Projects />
+        <Blog></Blog>
         <Contact />
       </main>
     </div>

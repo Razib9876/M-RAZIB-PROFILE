@@ -1,85 +1,57 @@
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const phrases = [
-  "Building  Scalable  Systems",
-  "Designing  User  Experiences",
-  "Full  Stack  Developer",
-  "Turning  Ideas  Into  Reality",
-  "Crafting  Digital  Products",
-];
+import { useState, useEffect } from "react";
+import { HiOutlineDocumentDownload, HiOutlineUser } from "react-icons/hi";
 
 const SlidingText = () => {
+  const phrases = [
+    "write clean, maintainable code",
+    "design intuitive user experiences",
+    "turn ideas into real products",
+  ];
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % phrases.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
-  // Cinematic staggered animation variants
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.08, delayChildren: 0.04 * i },
-    }),
-    exit: {
-      opacity: 0,
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
-  };
-
-  const child = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotateX: 0,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-      rotateX: 90,
-    },
-    exit: {
-      opacity: 0,
-      y: -20,
-      rotateX: -90,
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
-
   return (
-    <div className=" flex items-center ">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={phrases[index]}
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          className="flex flex-wrap gap-x-3"
+    <div className="flex flex-col items-center mt-6 w-full ">
+      {/* 1. Short Description (Approx 250 chars) */}
+      <p
+        className="
+text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(1.125rem,1vw+1rem,3rem)]
+"
+      >
+        Full Stack Developer passionate about building modern, scalable web
+        applications with clean architecture, strong backend logic, and
+        user-focused design.
+        <span
+          className="block text-zinc-500 dark:text-zinc-400 tracking-wide  
+text-[clamp(1.125rem,1vw+1rem,3rem)] transition-colors duration-500"
         >
-          {phrases[index].split(" ").map((word, i) => (
-            <motion.span
-              key={i}
-              variants={child}
-              className="inline-block mt-2 text-sm tracking-[0.4em] text-zinc-500 dark:text-zinc-400  md:text-xl "
-            >
-              {word}
-            </motion.span>
-          ))}
-        </motion.div>
-      </AnimatePresence>
+          My goal is to{" "}
+          <span className="relative inline-block h-16 w-full text-left align-bottom overflow-hidden ml-1 ">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={phrases[index]}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="absolute left-0 text-blue-600 dark:text-blue-400 font-semibold whitespace-nowrap"
+              >
+                {phrases[index]}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+        </span>
+      </p>
     </div>
   );
 };

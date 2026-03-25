@@ -1,44 +1,27 @@
-import Section from "../components/Section";
+import React from "react";
 import ProjectCard from "../components/ProjectCard";
-
-const projectData = [
-  {
-    title: "AI Dashboard Ultra",
-    description:
-      "A high-performance analytics dashboard with real-time data visualization and dark mode support.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bbb652167c8a?auto=format&fit=crop&q=80&w=800",
-    tags: ["React", "Tailwind", "Recharts"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "E-Commerce Smooth",
-    description:
-      "Full-stack shopping experience with Framer Motion transitions and Stripe integration.",
-    image:
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800",
-    tags: ["Next.js", "Framer Motion", "Supabase"],
-    github: "#",
-    demo: "#",
-  },
-  // Add more projects here...
-];
+import projects from "../assets/projects";
 
 const Projects = () => {
   return (
-    <Section id="projects">
-      <div className="mb-12">
-        <h2 className="text-4xl font-bold mb-4">Featured Work</h2>
-        <div className="h-1.5 w-20 bg-blue-600 rounded-full"></div>
-      </div>
+    <section id="projects" className="bg-white ">
+      <div className="w-full mx-auto px-6">
+        {/* Header - Minimalist & Bold */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black uppercase">
+            Creative Works
+          </h2>
+          <div className="h-1 w-12 bg-black mt-4"></div>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectData.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+        {/* Minimalist Grid - No Gap or Small Gap */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

@@ -1,54 +1,61 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FaExternalLinkAlt, FaGithub, FaYoutube } from "react-icons/fa";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
-      whileHover={{ y: -10 }}
-      className="group relative bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all duration-300"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative cursor-pointer overflow-hidden bg-gray-100 aspect-square"
     >
-      {/* Project Image Container */}
-      <div className="relative h-64 overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-          <div className="flex gap-4">
-            <a
-              href={project.github}
-              className="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/40 transition-colors"
-            >
-              <FiGithub size={20} />
-            </a>
-            <a
-              href={project.demo}
-              className="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/40 transition-colors"
-            >
-              <FiExternalLink size={20} />
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Project Image */}
+      <img
+        src={project.img}
+        alt={project.title}
+        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
 
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-500 transition-colors">
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 bg-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col items-center justify-center p-6 text-center">
+        <h3 className="text-xl font-bold uppercase tracking-widest text-black mb-2">
           {project.title}
         </h3>
-        <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+        <p className="text-sm text-gray-600 mb-6 line-clamp-2">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-800 rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
+
+        {/* Action Buttons */}
+        <div className="flex gap-5">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+            title="GitHub"
+          >
+            <FaGithub size={18} />
+          </a>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+            title="Live Demo"
+          >
+            <FaExternalLinkAlt size={16} />
+          </a>
+          <a
+            href={project.BsYoutube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+            title="YouTube"
+          >
+            <FaYoutube size={18} />
+          </a>
         </div>
       </div>
     </motion.div>
