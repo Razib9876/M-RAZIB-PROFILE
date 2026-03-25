@@ -25,18 +25,19 @@ const SlidingText = () => {
         className="
 text-zinc-500 dark:text-zinc-400
 tracking-wide transition-colors duration-500 
-text-[clamp(1.125rem,1vw+1rem,3rem)]
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]
 "
       >
         Full Stack Developer passionate about building modern, scalable web
         applications with clean architecture, strong backend logic, and
         user-focused design.
-        <span
+        {/* <span
           className="block text-zinc-500 dark:text-zinc-400 tracking-wide  
-text-[clamp(1.125rem,1vw+1rem,3rem)] transition-colors duration-500"
+text-[clamp(0.25rem,1vw+0.25rem,4rem)] transition-colors duration-500"
         >
           My goal is to{" "}
-          <span className="relative inline-block h-16 w-full text-left align-bottom overflow-hidden ml-1 ">
+          <span className="relative inline-block  w-full text-left align-bottom overflow-hidden ml-1 ">
             <AnimatePresence mode="wait">
               <motion.span
                 key={phrases[index]}
@@ -50,7 +51,7 @@ text-[clamp(1.125rem,1vw+1rem,3rem)] transition-colors duration-500"
               </motion.span>
             </AnimatePresence>
           </span>
-        </span>
+        </span> */}
       </p>
     </div>
   );

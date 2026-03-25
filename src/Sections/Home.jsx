@@ -163,7 +163,7 @@ const Home = () => {
       >
         {/* IMAGE (TOP ON MOBILE) */}
         <div className="flex justify-center items-center mb-10 lg:mb-0 lg:order-2">
-          <div className="w-52 h-52 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full border-[8px] border-zinc-300/50 dark:border-white/10 overflow-hidden shadow-2xl">
+          <div className="w-[clamp(14rem,30vw,42rem)] h-[clamp(14rem,30vw,42rem)] rounded-full border-[8px] border-zinc-300/50 dark:border-white/10 overflow-hidden shadow-2xl">
             <img
               src={profileImage}
               alt="M.Razib"
@@ -189,7 +189,15 @@ const Home = () => {
           </h1>
 
           {/* Typewriter */}
-          <div className="text-zinc-500 dark:text-zinc-400 text-lg md:text-xl tracking-wide transition-colors duration-500 mb-6">
+          <div
+            className="
+  text-zinc-500 dark:text-zinc-400
+  tracking-wide
+  transition-colors duration-500
+  mb-6
+  text-[clamp(1rem,1vw+0.75rem,1.5rem)]
+"
+          >
             <TypeAnimation
               sequence={[
                 "I'm a Full Stack Developer",
@@ -210,11 +218,14 @@ const Home = () => {
           <SlidingText />
 
           {/* Buttons (ROW on all screens) */}
-          <div className="flex flex-row items-center justify-center lg:justify-start gap-4 mt-8">
+          <div className="flex flex-row items-center justify-center lg:justify-start gap-4 mt-4">
             {/* About Me Button */}
             <button
               onClick={handleScrollToAbout}
-              className="px-6 py-3 text-sm tracking-[0.2em]
+              className="gap-[clamp(0.25rem,0.5vw,0.5rem)] 
+px-[clamp(0.8rem,1.5vw,2.5rem)] 
+py-[clamp(0.4rem,0.8vw,1.2rem)]
+text-[clamp(0.65rem,0.9vw,1.1rem)]  tracking-[0.2em]
                border border-zinc-400 dark:border-zinc-600
                text-black dark:text-white
                hover:bg-black hover:text-white
@@ -229,7 +240,10 @@ const Home = () => {
             <a
               href="/cv.pdf"
               download
-              className="flex items-center gap-2 px-6 py-3 text-sm tracking-[0.2em]
+              className="flex items-center gap-[clamp(0.25rem,0.5vw,0.5rem)] 
+px-[clamp(0.8rem,1.5vw,2.5rem)] 
+py-[clamp(0.4rem,0.8vw,1.2rem)]
+text-[clamp(0.65rem,0.9vw,1.1rem)] tracking-[0.2em]
                border border-zinc-400 dark:border-zinc-600
                text-black dark:text-white
                hover:bg-black hover:text-white
@@ -245,7 +259,7 @@ const Home = () => {
       </motion.div>
 
       {/* SCROLL BUTTON */}
-      <motion.button
+      {/* <motion.button
         onClick={handleScrollToAbout}
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -253,7 +267,7 @@ const Home = () => {
                    text-gray-900 dark:text-white/60 z-20"
       >
         <HiChevronDoubleDown size={30} />
-      </motion.button>
+      </motion.button> */}
     </section>
   );
 };

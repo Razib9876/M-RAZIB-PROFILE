@@ -107,18 +107,20 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block border-b border-zinc-200 dark:border-zinc-800 py-5"
+                className="block border-b border-zinc-200 dark:border-zinc-800 py-3"
               >
                 <span
-                  className={`flex items-center justify-between text-sm tracking-[0.3em] transition-colors
+                  className={`flex items-center 
+text-[clamp(0.5rem,1vw,3rem)]
+gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
                   ${
                     isActive
                       ? "text-black dark:text-white"
                       : "text-zinc-500 hover:text-black dark:hover:text-white"
                   }`}
                 >
-                  {item.name}
                   <span className="text-lg opacity-70">{item.icon}</span>
+                  {item.name}
                 </span>
               </a>
             );
