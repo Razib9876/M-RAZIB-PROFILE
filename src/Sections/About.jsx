@@ -7,19 +7,15 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-base-100 min-h-screen  flex  transition-colors duration-300"
+      className="
+  bg-stone-100 dark:bg-gray-950
+  min-h-screen
+  transition-colors duration-500
+"
     >
-      <div className="w-full px-6 w-full">
-        {/* Simple Header - Logo Style */}
-        <div className="mb-10 border-l-8 border-base-content pl-6">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-base-content">
-            About <br />
-            <span className="opacity-30">Me.</span>
-          </h2>
-        </div>
-
+      <div className="w-full px-6">
         {/* Main Content Grid */}
-        <div className="grid md:grid-cols-12 gap-12">
+        <div className="grid md:grid-cols-12 gap-12  items-start">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,29 +23,49 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="md:col-span-8 space-y-8"
           >
+            <div className="mb-10 border-l-2 border-base-content pl-6">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] uppercase font-serif">
+                About Me
+              </h2>
+            </div>
             <h3 className="text-2xl md:text-3xl font-bold text-base-content">
               I'm Mohammad Razib
             </h3>
 
-            <div className="space-y-6 text-lg text-base-content/70 leading-relaxed font-medium">
-              <p>
-                I studied Management, but later discovered my passion for web
-                development and started learning it.
-              </p>
+            <div
+              className="mt-0
+text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]
+"
+            >
+              <ul className="space-y-3 list-disc pl-5 ">
+                <li>
+                  Build scalable and maintainable web applications using modern
+                  technologies with a focus on clean architecture and
+                  performance.
+                </li>
+                <li>
+                  Developed a local bidding-based platform to solve real-world
+                  problems, handling backend logic, data flow, and TypeScript
+                  integration.
+                </li>
+                <li>
+                  Currently working with local business owners to create custom
+                  e-commerce platforms that improve their online presence and
+                  streamline operations.
+                </li>
+              </ul>
 
-              <p className="text-base-content">
-                I enjoy solving real-world problems. I built a local solution
-                with a bidding system, which challenged me to work with data
-                structures, backend logic, and TypeScript as a fresher.
-              </p>
-
-              <p>
-                Recently, I'm working with local business owners about building
-                modern, maintainable custom-coded e-commerce websites and
-                improving their branding.
-              </p>
-
-              <p className="text-base-content font-bold underline decoration-1 underline-offset-8">
+              <p
+                className=" 
+text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]
+ underline decoration-1 underline-offset-8 mt-8"
+              >
                 Currently, I am exploring AI, web design, and no-code tools to
                 expand my skills.
               </p>
@@ -63,25 +79,55 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-4"
           >
-            <div className="bg-base-content text-base-100 p-8 rounded-none border border-base-content">
-              <h4 className="text-xs uppercase tracking-[0.3em] mb-6 opacity-70">
+            <div
+              className="
+    p-8 border
+
+    bg-white dark:bg-zinc-900
+    border-zinc-300 dark:border-zinc-700
+
+    transition-colors duration-500
+  "
+            >
+              <h4
+                className="
+      text-2xl md:text-3xl font-bold
+
+      text-zinc-900 dark:text-zinc-100
+      transition-colors duration-500
+    "
+              >
                 Core Focus
               </h4>
-              <ul className="space-y-4 font-bold text-sm">
+
+              <ul
+                className="
+      mt-6 space-y-4
+
+      text-zinc-500 dark:text-zinc-400
+      tracking-wide transition-colors duration-500 
+
+      text-[clamp(0.95rem,2vw,1.2rem)]   
+      lg:text-[clamp(1rem,1vw+0.3rem,1.5rem)]
+    "
+              >
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  <span className="w-2 h-2 bg-zinc-500 dark:bg-zinc-400 rotate-45"></span>
                   Real-world problem solving
                 </li>
+
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  <span className="w-2 h-2 bg-zinc-500 dark:bg-zinc-400 rotate-45"></span>
                   Backend & API development
                 </li>
+
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  <span className="w-2 h-2 bg-zinc-500 dark:bg-zinc-400 rotate-45"></span>
                   Scalable architecture focus
                 </li>
+
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-base-100 rotate-45"></span>
+                  <span className="w-2 h-2 bg-zinc-500 dark:bg-zinc-400 rotate-45"></span>
                   Creative & design interest
                 </li>
               </ul>
@@ -91,7 +137,7 @@ const About = () => {
             <div className="mb-4 mt-6 w-full">
               {/* Download CV */}
               <a
-                href="/cv.pdf"
+                href="src/assets/Mohammad_Razib_FlowCV_Resume_2026-03-01.pdf"
                 download
                 className="flex items-center justify-center gap-2
                                border border-zinc-300 dark:border-zinc-700

@@ -54,7 +54,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/40 z-40 lg:hidden backdrop-blur-sm mr-2"
+              className="fixed inset-0 bg-black/40 z-40 lg:hidden backdrop-blur-sm mr-2 "
             />
 
             {/* Close Button */}
@@ -63,7 +63,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               onClick={() => setIsOpen(false)}
-              className="fixed left-[78%] top-1/2 -translate-y-1/2 z-[60] lg:hidden
+              className="fixed left-[78%] top-1/2 -translate-y-1/2 z-[60] lg:hidden ml-4
                          bg-white dark:bg-zinc-800 p-3 rounded-full shadow-xl
                          text-black dark:text-white border border-zinc-200 dark:border-zinc-700"
             >
@@ -129,7 +129,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
 
         {/* Download CV */}
         <a
-          href="/cv.pdf"
+          href="src/assets/Mohammad_Razib_FlowCV_Resume_2026-03-01.pdf"
           download
           className="flex items-center justify-center gap-2
                      border border-zinc-300 dark:border-zinc-700
@@ -144,7 +144,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
         {/* Social Icons */}
         <div className="flex justify-center gap-5 text-xl mb-6 text-zinc-500">
           <a
-            href="https://github.com"
+            href="https://github.com/Razib9876"
             target="_blank"
             className="hover:text-black dark:hover:text-white"
           >
@@ -152,7 +152,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="www.linkedin.com/in/mohammad-razib-3972873b4"
             target="_blank"
             className="hover:text-black dark:hover:text-white"
           >
@@ -160,15 +160,16 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
           </a>
 
           <a
-            href="mailto:yourmail@gmail.com"
+            href="mailto:mohammadrazib987@gmail.com"
             className="hover:text-black dark:hover:text-white"
           >
             <HiMail />
           </a>
 
           <a
-            href="https://wa.me/8800000000000"
+            href="https://wa.me/8801723830614"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-black dark:hover:text-white"
           >
             <FaWhatsapp />

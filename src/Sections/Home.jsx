@@ -162,7 +162,7 @@ const Home = () => {
         className="relative z-10 w-full h-full grid grid-cols-1 lg:grid-cols-2 items-center px-6 md:px-16"
       >
         {/* IMAGE (TOP ON MOBILE) */}
-        <div className="flex justify-center items-center mb-10 lg:mb-0 lg:order-2">
+        <div className="flex justify-center items-center  lg:order-2">
           <div className="w-[clamp(14rem,30vw,42rem)] h-[clamp(14rem,30vw,42rem)] rounded-full border-[8px] border-zinc-300/50 dark:border-white/10 overflow-hidden shadow-2xl">
             <img
               src={profileImage}
@@ -191,24 +191,23 @@ const Home = () => {
           {/* Typewriter */}
           <div
             className="
-  text-zinc-500 dark:text-zinc-400
-  tracking-wide
-  transition-colors duration-500
-  mb-6
-  text-[clamp(1rem,1vw+0.75rem,1.5rem)]
+text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]
 "
           >
             <TypeAnimation
               sequence={[
                 "I'm a Full Stack Developer",
-                2000,
+                2500,
                 "I design clean user experiences",
-                2000,
+                2500,
                 "I turn ideas into real products",
-                2000,
+                2500,
               ]}
               wrapper="span"
-              speed={50}
+              speed={100}
               repeat={Infinity}
               cursor={true}
             />

@@ -51,14 +51,15 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative  flex  overflow-hidden  bg-white dark:bg-black
+  min-h-screen
+  transition-colors duration-500"
     >
-      <div className="max-w-6xl mx-auto px-6 w-full">
+      <div className="  px-6 w-full">
         {/* HEADER */}
-        <div className="mb-10 border-l-8 border-base-content pl-6">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-base-content">
-            Contact <br />
-            <span className="opacity-30">Me.</span>
+        <div className="mb-10 border-l-2 border-base-content pl-6">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] uppercase font-serif">
+            Contact Me
           </h2>
         </div>
 
@@ -78,7 +79,12 @@ const Contact = () => {
             >
               {/* NAME */}
               <div className="space-y-2">
-                <label className="text-sm text-base-content font-medium">
+                <label
+                  className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]"
+                >
                   Full Name
                 </label>
                 <input
@@ -96,7 +102,12 @@ const Contact = () => {
 
               {/* EMAIL */}
               <div className="space-y-2">
-                <label className="text-sm text-base-content font-medium">
+                <label
+                  className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]"
+                >
                   Email
                 </label>
                 <input
@@ -114,7 +125,12 @@ const Contact = () => {
 
               {/* MESSAGE */}
               <div className="space-y-2">
-                <label className="text-sm text-base-content font-medium">
+                <label
+                  className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]"
+                >
                   Message
                 </label>
                 <textarea
@@ -134,7 +150,8 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group w-full py-3 border border-base-content text-base-content hover:bg-base-content hover:text-base-100 transition-all flex items-center justify-center gap-3 text-xs uppercase tracking-widest font-black disabled:opacity-50"
+                className=" hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black text-sm
+                               transition-all border-zinc-300 dark:border-zinc-700 group w-full py-3 border border-base-content  hover:bg-base-content hover:text-base-100 transition-all flex items-center justify-center gap-3  uppercase tracking-widest  disabled:opacity-50"
               >
                 {isSubmitting ? "Transmitting..." : "Submit"}
                 <HiArrowRight className="text-lg group-hover:translate-x-1 transition-transform duration-300" />
@@ -154,17 +171,32 @@ const Contact = () => {
               Let’s Talk
             </h3>
 
-            <p className="text-base-content/70 leading-relaxed">
+            <p
+              className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]"
+            >
               Have an idea or project in mind? I’m open to discussing meaningful
               work and building something impactful together.
             </p>
 
-            <p className="text-base-content/70 leading-relaxed">
+            <p
+              className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]"
+            >
               Whether it's backend systems, modern web apps, or improving your
               digital presence — I can help turn your ideas into reality.
             </p>
 
-            <p className="text-base-content font-semibold underline underline-offset-4">
+            <p
+              className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]"
+            >
               Let’s build something real.
             </p>
           </motion.div>

@@ -9,20 +9,26 @@ const Blog = () => {
   return (
     <section
       id="blogs"
-      className="bg-white dark:bg-black text-black dark:text-white overflow-hidden w-full transition-colors duration-500"
+      className=" bg-stone-100 dark:bg-gray-950
+  min-h-screen
+  transition-colors duration-500 overflow-hidden w-full "
     >
       {/* SECTION HEADER */}
-      <div className="px-6 md:px-16  pb-10">
-        {/* TITLE */}
-        <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] uppercase font-serif">
-          Blogs | Learning Journey
-        </h2>
-
-        {/* LINE */}
-        <div className="w-24 h-[2px] bg-[#be8558] mt-4"></div>
+      <div className=" pb-10 mb-10 pl-6 ">
+        <div className=" border-l-2 border-base-content ">
+          {/* TITLE */}
+          <h2 className="text-3xl md:text-5xl font-bold tracking-[0.2em] uppercase font-serif pl-6">
+            Blogs | Learning Journey
+          </h2>
+        </div>
 
         {/* DESCRIPTION */}
-        <p className="mt-6 max-w-2xl text-sm md:text-base text-zinc-600 dark:text-zinc-400 tracking-wide leading-relaxed transition-colors">
+        <p
+          className="text-zinc-500 dark:text-zinc-400
+tracking-wide transition-colors duration-500 
+text-[clamp(0.8rem,3vw,4rem)]   
+lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)] mt-8"
+        >
           A collection of my hands-on learning experiences, real-world projects,
           and technical explorations as I grow as a full-stack developer. Each
           entry reflects problem-solving, design thinking, and continuous

@@ -22,6 +22,8 @@ export default {
         serif: ["Oswald", "sans-serif"],
       },
       screens: {
+        xs: "480px",
+        custom: "800px",
         "3xl": "1500px",
         "4xl": "2000px",
         "5xl": "2500px",
