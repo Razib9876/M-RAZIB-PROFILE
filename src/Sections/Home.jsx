@@ -237,7 +237,7 @@ text-[clamp(0.65rem,0.9vw,1.1rem)]  tracking-[0.2em]
 
             {/* Download CV Button */}
             <a
-              href="/cv.pdf"
+              href="src/assets/Mohammad_Razib_FlowCV_Resume_2026-03-01.pdf"
               download
               className="flex items-center gap-[clamp(0.25rem,0.5vw,0.5rem)] 
 px-[clamp(0.8rem,1.5vw,2.5rem)] 
