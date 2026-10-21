@@ -11,7 +11,7 @@ import {
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 import { MdDownload } from "react-icons/md";
-
+import resume from "../assets/Md Razibul Islam Resume (1).pdf";
 import useScrollSpy from "../hooks/useScrollSpy";
 import ThemeToggle from "./ThemeToggle";
 
@@ -144,7 +144,8 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
         {/* Social Icons */}
         <div className="flex justify-center gap-5 text-xl mb-6 text-zinc-500">
           <a
-            href="https://github.com/Razib9876"
+            href={resume}
+            download="Md-Razibul-Islam-Resume.pdf"
             target="_blank"
             className="hover:text-black dark:hover:text-white"
           >
