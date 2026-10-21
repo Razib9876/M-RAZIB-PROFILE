@@ -129,7 +129,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
 
         {/* Download CV */}
         <a
-          href="src/assets/Md Razibul Islam Resume (1).pdf"
+          href="src/assets/MdRazibulIslamResume.pdf"
           download
           className="flex items-center justify-center gap-2
                      border border-zinc-300 dark:border-zinc-700
@@ -144,8 +144,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
         {/* Social Icons */}
         <div className="flex justify-center gap-5 text-xl mb-6 text-zinc-500">
           <a
-            href={resume}
-            download="Md-Razibul-Islam-Resume.pdf"
+            href="https://github.com/Razib9876"
             target="_blank"
             className="hover:text-black dark:hover:text-white"
           >
