@@ -129,7 +129,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
 
         {/* Download CV */}
         <a
-          href="src/assets/Mohammad_Razib_FlowCV_Resume_2026-03-01.pdf"
+          href="src/assets/Md Razibul Islam Resume (1).pdf"
           download
           className="flex items-center justify-center gap-2
                      border border-zinc-300 dark:border-zinc-700
