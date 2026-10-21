@@ -185,7 +185,7 @@ const Home = () => {
   text-[clamp(2rem,4vw+1rem,5.5rem)]
 "
           >
-            M.Razib
+            M.Razibuhjgghkh
           </h1>
 
           {/* Typewriter */}
