@@ -13,6 +13,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import useScrollSpy from "../hooks/useScrollSpy";
 import ThemeToggle from "./ThemeToggle";
+import resume from "../../public/Md Razibul Islam Resume.pdf";
 
 const navItems = [
   { name: "HOME", icon: <HiHome />, href: "#home" },
@@ -128,7 +129,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
 
         {/* Download CV */}
         <a
-          href="src/assets/MdRazibulIslamResume.pdf"
+          href={resume}
           download
           className="flex items-center justify-center gap-2
                      border border-zinc-300 dark:border-zinc-700
