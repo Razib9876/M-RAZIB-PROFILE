@@ -132,7 +132,7 @@ import SlidingText from "../components/SlidingText";
 
 import profileImage from "../assets/profileImageBlackAndWhite.jpeg";
 import { MdDownload } from "react-icons/md";
-
+import resume from "../../public/Md Razibul Islam Resume.pdf";
 const Home = () => {
   const handleScrollToAbout = () => {
     const section = document.getElementById("about");
@@ -237,7 +237,7 @@ text-[clamp(0.65rem,0.9vw,1.1rem)]  tracking-[0.2em]
 
             {/* Download CV Button */}
             <a
-              href="src/assets/Md Razibul Islam Resume.pdf"
+              href={resume}
               download
               className="flex items-center gap-[clamp(0.25rem,0.5vw,0.5rem)] 
 px-[clamp(0.8rem,1.5vw,2.5rem)] 
