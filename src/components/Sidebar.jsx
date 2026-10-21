@@ -11,7 +11,6 @@ import {
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 import { MdDownload } from "react-icons/md";
-import resume from "../assets/Md Razibul Islam Resume (1).pdf";
 import useScrollSpy from "../hooks/useScrollSpy";
 import ThemeToggle from "./ThemeToggle";
 
