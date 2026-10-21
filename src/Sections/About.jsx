@@ -137,7 +137,7 @@ lg:text-[clamp(0.5rem,1vw+0.25rem,3rem)]
             <div className="mb-4 mt-6 w-full">
               {/* Download CV */}
               <a
-                href="src/assets/Mohammad_Razib_FlowCV_Resume_2026-03-01.pdf"
+                href="https://drive.google.com/file/d/1-doS-RDR_frBFrbVDVnmctNDjMoE7FVQ/view?ts=6ad8c3f3"
                 download
                 className="flex items-center justify-center gap-2
                                border border-zinc-300 dark:border-zinc-700
