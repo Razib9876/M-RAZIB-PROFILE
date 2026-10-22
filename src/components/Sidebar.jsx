@@ -160,7 +160,7 @@ gap-[clamp(0.2rem,0.6vw,1rem)]  tracking-[0.3em] transition-colors
           </a>
 
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammadrazib987@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mrazib9004@gmail.com"
             className="hover:text-black dark:hover:text-white"
           >
             <HiMail />
