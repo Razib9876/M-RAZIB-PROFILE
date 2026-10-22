@@ -90,13 +90,19 @@ const ProjectCard = ({ project, index }) => {
 
       {/* Hover Overlay */}
       <div
-        className="
-          absolute inset-0 flex flex-col items-center justify-center p-6 text-center
+        // className="
+        //   absolute inset-0 flex flex-col items-center justify-center p-6 text-center
 
-          bg-white/90 dark:bg-black/80
-          opacity-100 md:opacity-0 md:group-hover:opacity-100
-          transition-all duration-300
-        "
+        //   bg-white/90 dark:bg-black/80
+        //   opacity-100 md:opacity-0 md:group-hover:opacity-100
+        //   transition-all duration-300
+        // "
+        className="
+  absolute inset-0 flex flex-col items-center justify-center p-6 text-center
+  bg-white/90 dark:bg-black/80
+  opacity-100 md:opacity-0 md:group-hover:opacity-100
+  transition-all duration-300
+"
       >
         <h3
           className="
