@@ -30,7 +30,7 @@ const About = () => {
               </h2>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-base-content">
-              I'm Mohammad Razib
+              Md Razibul Islam
             </h3>
 
             <div
