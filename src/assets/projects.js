@@ -21,13 +21,13 @@ const projects = [
     github: "github.com/Razib9876/electpro.git",
   },
   {
-    title: "AI Image SaaS",
+    title: "Maison Wood",
     description:
-      "A dashboard for AI-generated assets with subscription management.",
-    img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80",
-    tags: ["TypeScript", "Mongoose", "Redux"],
-    link: "#",
-    github: "#",
+      "Designed a modern, elegant furniture website featuring a clean layout, premium visuals, and a seamless user experience.",
+    img: "../assets/projects/maisonwood.png",
+    tags: ["React", "Firebase", "Tailwind"],
+    link: "https://maisonwood.netlify.app/",
+    github: "https://github.com/Razib9876/maison-wood",
   },
 ];
 
