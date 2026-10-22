@@ -94,7 +94,7 @@ const ProjectCard = ({ project, index }) => {
           absolute inset-0 flex flex-col items-center justify-center p-6 text-center
 
           bg-white/90 dark:bg-black/80
-          opacity-0 group-hover:opacity-100
+          opacity-100 md:opacity-0 md:group-hover:opacity-100
           transition-all duration-300
         "
       >
