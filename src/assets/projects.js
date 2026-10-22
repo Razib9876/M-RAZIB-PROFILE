@@ -21,13 +21,13 @@ const projects = [
     github: "github.com/Razib9876/electpro.git",
   },
   {
-    title: "Maison Wood",
+    title: "Maison",
     description:
       "Designed a modern, elegant furniture website featuring a clean layout, premium visuals, and a seamless user experience.",
     img: "https://i.ibb.co.com/NgfJvRH3/Screenshot-2026-10-22-182559.png",
     tags: ["React", "Firebase", "Tailwind"],
-    link: "https://maisonwood.netlify.app/",
-    github: "https://github.com/Razib9876/maison-wood",
+    link: "https://maisonecomerce.netlify.app/",
+    github: "https://github.com/Razib9876/maison",
   },
 ];
 
