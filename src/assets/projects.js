@@ -24,7 +24,7 @@ const projects = [
     title: "Maison Wood",
     description:
       "Designed a modern, elegant furniture website featuring a clean layout, premium visuals, and a seamless user experience.",
-    img: "public/maisonwood.png",
+    img: "https://i.ibb.co.com/NgfJvRH3/Screenshot-2026-10-22-182559.png",
     tags: ["React", "Firebase", "Tailwind"],
     link: "https://maisonwood.netlify.app/",
     github: "https://github.com/Razib9876/maison-wood",
